@@ -1,10 +1,88 @@
+@import url(color.css);
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+
+header{
+    background-color: #630778;
+    height: 130px;
+
+    
+}
+
+nav > a {
+  border: 1px solid var(--rosa);
+  border-radius: 19px;
+  text-decoration: none;
+  color: white;
+  padding-right: 10px;
+  padding-left: 10px;  
+}
+nav > a:hover {
+  background-color: #d687e8;
+  
+}
+
+.titulo a{
+  text-decoration: none;
+}
+
+
+.logo{
+    width: 100px;
+}
+.btn_offcanvas{
+    display: none;
+}
+
+
+.bor{
+    border: 1px solid red;
+}
+
+.cant_carrito{
+    font-size: 1.2rem;
+}
+.cesta_header{
+  font-size: 35px;
+  color: white;
+}
 .cesta{
-    font-size: 30px;
+    font-size: 20px;
+    color: white;
+    padding: 0;    
+}
+.cesta_header:hover{
+  color: #d687e8;
+}
+
+@media screen and (max-width:768px){
+.btn_offcanvas{
+    display: block;
+}
+    .menu {
+        display: none;
+    }
+    
+    
+    .cesta{
+        font-size: 20px;
+    }
+    @media screen and (max-width:400px){
+    .logo{
+        width: 20px;
+    }
+}
+
+}
+
+h1{
+    font-size: 1.8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
 }
 
 footer{
@@ -14,6 +92,8 @@ footer{
 main{
     background-color: gainsboro;
     min-height: 75vh;
+    border-radius: 25px;
+
 }
 .logofooter{
     height: 250px;
@@ -39,10 +119,7 @@ main{
     height: 24px;
     font-weight: bolder;
 }
-.boton{
-    width: 50%;
-    margin-left: 25%;
-}
+
 .parrafo-oscuro{
    background-color: rgba(220, 9, 9, 0.804);
 }
@@ -123,18 +200,18 @@ li>div>img{
     height: 3.5rem;
 }
 .masInfo{
-    background-color: #dc3545;
+    background-color: var(--violeta);
 }
 .masInfo:hover{
-    background-color: #f10820;
+    background-color: var(--rosa);
 }
 .carritoProductos{
-    background-color: #dc3545;
-    height: 2.8rem;
-    font-size: 25px;
+    background-color: #0f8307;
+    color: white;
+    font-size: 20px;
 }
 .carritoProductos:hover{
-    background-color: #f10820;
+    background-color: rgb(4, 222, 84);
 }
 .imgProductos{
     width: 90%;
@@ -148,10 +225,106 @@ li>div>img{
     width: 60%;
 }
 .imputSearch{
-    height: 50px;
+    width: 600px;
 }
 @media screen and (max-width:900px) {
     .fondo-principal{
         flex-direction: column;
     }
+}
+
+.offC{
+  background-color: #3b2441;
+  color: white;
+  width: 200px!important;
+  margin-top: 130px;
+  border-radius: 0 15px 15px 0;
+  height: 200px;
+  padding-left: 50px;
+
+}
+
+.cardJuguetes img{
+    height: 300px;
+}
+
+.contenedorCard{
+    width: 80vw;
+}
+.contenedorCheckbox{
+    width: 15vw;
+    height: 30vh;
+}
+.stockJuguetes{
+    position: absolute;
+    border: 1px solid #f55288;
+    border-radius: 20px;
+    right: 0.1rem;
+    top: 0.3rem;
+    background-color: #f55288;
+    color: white;
+    height: 3rem;
+    width: 6rem;
+    font-size: 14;
+}
+.product-filter {
+    display: flex;
+
+  }
+
+@media (max-width: 768px){
+    .filtros{
+        flex-direction: column;
+    }
+}
+
+p{
+    color: white;
+}
+
+.style-navlinks{
+    margin: 5px;
+    background-color: #FFF0F5;
+    border-radius: 20px;
+}
+
+
+.boton-stile{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 5rem;
+}
+
+.text-footer{
+    color: white;
+}
+
+.iconos-redes a img, .huella{
+    height: 50px;
+    color: white;
+    border-radius: 50%;
+    border: 2px solid white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+.iconos-redes a{
+    margin: 0 10px 0 10px;
+}
+
+.iconos-redes a{
+    margin: 0 10px 0 10px;
+}
+
+footer{
+    min-height: 10vh;
+    background-color: rgba(64, 2, 74, 0.804)
+
+}
+.logofooter{
+  height: 220px;
+}
+
+.style-alert{
+    caret-color: white;
+    border-radius: 10px;
 }
