@@ -3,11 +3,22 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        carrito:[],
         producto:{},
         productos:[], 
         idProducto:null, 
-        parametro:null,                   
+        parametro:null,  
+        carrito:[],
+            contadorCarritoProducto:0,
+            totalCarrito:0,
+            cantidad:0, 
+            productosTotales: [], 
+            productosFarmacia:[],   
+            farmaciaFiltrados: [],
+            textoIngresado: "",
+            menosDeMil: false, 
+            masDeMil: false, 
+            checked:[],
+            filtrados:[],                 
       }
     },
 

@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle| Pet Paradise </title>
     <link rel="shortcut icon" href="../images/PetParadiseIcono.png" type="image/x-icon">
-    <link rel="stylesheet" href="../styles/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/index.css">
+
 </head>
 <body>
     <div class="d-flex flex-column" id="app">
@@ -41,26 +42,29 @@
         </div>
       </header>
         
-        <main class="container d-flex align-content-center justify-content-center align-items-center">
-          <div class="d-flex justify-content-center align-content-center">
-            <div  class="d-flex justify-content-center ">
-              <div class="col-md-4 d-flex align-items-center  p-2  ">
-                <img v-bind:src="producto.imagen" class="img-fluid object-fit-cover  p-2 " alt="producto.producto">
+      <main class="container p-5 ">
+        <div class="row justify-content-center align-items-center my-5">
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-4">
+                <img v-bind:src="producto.imagen" class="img-fluid rounded-3" alt="{{producto.producto}}">
               </div>
-              <div class="col-md-6 ">
-                <div class="card-body  p-2 ">
-                  
-                  <h4 class="fs-1 fw-light p-3 text-danger "> {{producto.producto}}</h4>
-                  <p v-if="producto.disponibles<5" class="btn btn-warning border rounded-5 ">¡Pocas unidades!</p>
-                  <p class="card-text fst-italic lh-base">  {{producto.descripcion}}</p>
-                  
-                  <p class="card-text"> Precio:$ {{producto.precio}}</p>  
-                  <button type="button" class="btn btn-danger btn-lg border border-2 rounded-pill" ><i class="bi bi-bag"></i>  Añadir a la cesta</button>           
+              <div class="col-md-8">
+                <div class="card-body p-2">
+                  <h4 class="fs-1 fw-light p-3 text-danger">{{producto.producto}}</h4>
+                  <p v-if="producto.disponibles < 5" class="btn btn-warning border rounded-5">¡Pocas unidades!</p>
+                  <p class="card-text fst-italic lh-base">{{producto.descripcion}}</p>
+                  <p class="card-text">Precio: ${{producto.precio}}</p>  
+                  <button v-if="producto.disponibles > 0" class="carritoProductos btn text-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" @click="agregarAlCarrito(producto)">
+                    <i class="bi bi-cart4"></i>
+                  </button>
                 </div>
               </div>
+            </div>
           </div>
-          </div>   
-      </main> 
+        </div>
+      </main>
+      
       <div class="d-flex justify-content-end align-items-center">
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
           <div class="offcanvas-header carrito">
@@ -100,9 +104,9 @@
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <a class="nav-link fs-5 fw-semibold" href="./assets/pages/juguetes.html">Juguetes</a>
-          <a class="nav-link fs-5 fw-semibold" href="./assets/pages/farmacia">Farmacia</a>
-          <a class="nav-link fs-5 fw-semibold" href="./assets/pages/contact.html">Contacto</a>
+          <a class="nav-link fs-5 fw-semibold" href="../juguetes.html">Juguetes</a>
+          <a class="nav-link fs-5 fw-semibold" href="../farmacia">Farmacia</a>
+          <a class="nav-link fs-5 fw-semibold" href="../contact.html">Contacto</a>
         </div>
       </div>
       <footer class="d-flex flex-column  flex-lg-row justify-content-center align-items-center ">
