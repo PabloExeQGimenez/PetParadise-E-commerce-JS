@@ -65,10 +65,11 @@
         <div class="d-flex flex-column align-items-center mt-4 justify-content-end">
           <h3 class="text-danger">Los favoritos de tu mascota</h3>
           <h2 class="pb-3">Los más Populares</h2>
-          <form class="d-flex pb-5" role="search" id="buscador">
-            <input class="imputSearch form-control me-1 border border-danger-subtle" type="text" aria-label="Search"
-              placeholder="Busca Aquí" v-model="valorBusqueda" @input="filtrarPorBuscador">
-          </form>
+          <form class="d-flex flex-column flex-sm-row pb-3 pb-sm-0 mb-5" role="search" id="buscador">
+            <input class="imputSearch form-control me-1  mb-sm-0 border border-danger-subtle" type="text"
+                aria-label="Search" placeholder="Busca Aquí" v-model="valorBusqueda" @input="filtrarPorBuscador">
+        </form>
+        
         </div>
         <div class="d-flex flex-wrap gap-4 justify-content-center mb-3 contenedorCard container" >
           <div class="card ms-2 me-2" style="width: 20rem;" v-if="filtroBusqueda !=0"
