@@ -85,8 +85,52 @@
                         <img class="error rounded-3" src="https://static.vecteezy.com/system/resources/previews/004/435/751/non_2x/404-error-page-with-black-cat-illustrations-not-found-system-updates-uploading-operation-computing-installation-programs-vector.jpg" alt="">
                     </section>
                 </div>
-            </div>
+            
         </main>
+        <div class="d-flex justify-content-end align-items-center">
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header carrito">
+              <h5 class="offcanvas-title" id="offcanvasRightLabel">Tu Carrito</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="card-carrito">
+                <li v-for="producto of carrito">
+                  <div class="fw-bold fs-4">{{producto.producto}}</div>
+                  <div class="d-flex align-items-center justify-content-around">
+                    <img :src="producto.imagen" class="card-img-top img-card" :alt="producto.producto">
+                    <div>
+                      <button class="aumentoDisminucion me-1" @click.prevent="disminuirCantidad(producto)">-</button>
+                      {{ producto.cantidad }}
+                      <button class="aumentoDisminucion ms-1" @click.prevent="aumentarCantidad(producto)">+</button>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="fs-5">$ {{producto.precio}}</div>
+                    <button class="eliminar" @click.prevent="removerDesdeCarrito(producto)">Eliminar</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="d-flex justify-content-center"><span class="text-center mt-2 mb-2 total fw-bold fs-5">Total=$
+                {{totalCarrito}}</span></div>
+            <div class="d-flex justify-content-center"><button class="mt-2 mb-2 continuar" @click="">Continuar</button>
+            </div>
+            <div class="d-flex justify-content-center"><button class="mb-3 eliminar" @click="vaciarCarrito">Vaciar
+                carrito</button></div>
+          </div>
+        </div>
+        <div class="offcanvas offcanvas-start offC" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+          id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <a class="nav-link fs-5 fw-semibold" href="./assets/pages/juguetes.html">Juguetes</a>
+            <a class="nav-link fs-5 fw-semibold" href="./assets/pages/farmacia">Farmacia</a>
+            <a class="nav-link fs-5 fw-semibold" href="./assets/pages/contact.html">Contacto</a>
+          </div>
+        </div>
         <footer class="d-flex flex-column  flex-lg-row justify-content-center align-items-center ">
           <div class="d-flex flex-column align-items-center m-5 w-25">
             <p class= "fst-italic fs-5 badge ">Pet Paradise Shop</p>

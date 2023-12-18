@@ -23,11 +23,7 @@
               </a>
             </div>
             <div class="d-flex align-items-center">
-              <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                aria-controls="offcanvasRight">
-                <i class="bi bi-cart4 cesta_header"><span class="cant_carrito"
-                    v-if="carrito.length>0">({{carrito.length}})</span></i>
-              </button>
+              
       
               <div class="menu">
                 <nav class="d-flex gap-4">
@@ -46,8 +42,8 @@
           <main class="container p-5">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="d-flex justify-content-between align-content-center align-self-center border p-3">
-                        <form class=" border w-100" id="miFormulario">
+                    <div class="d-flex justify-content-between align-content-center align-self-center p-3">
+                        <form class=" w-100" id="miFormulario">
                             <div class=" form-group">
                                 <label class="text-black" for="nombre">Nombre:</label>
                                 <input type="text" class="form-control text-black" id="nombre" name="nombre" required>
@@ -87,9 +83,9 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="col-12 col-lg-8 w-100">
-                        <h3>Ubicación</h3>
-                        <iframe
+                    <div class="col-12 col-lg-8 w-100 ">
+                        <h3 class="text-center">Ubicación</h3>
+                        <iframe class="rounded-3"
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.066850016401!2d-58.3815704!3d-34.6037389!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1sen!2sar!4v1695337717578!5m2!1sen!2sar"
                             width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -98,58 +94,7 @@
             </div>
         </main>
 
-        <!-- <main class="container p-5 d-flex justify-content-center align-content-center">
-            <div class="row">
-                <div class="column">
-            <div class="d-flex justify-content-between align-content-center align-self-center ">
-                <form class=" border" id="miFormulario">
-                    <div class=" form-group">
-                        <label class="text-black" for="nombre">Nombre:</label>
-                        <input type="text" class="form-control text-black" id="nombre" name="nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="text-black" for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="text-black" for="nombre">Telefono:</label>
-                        <input type="text" class="form-control" id="telefono" name="telefono" required>
-                    </div>
-                    <h6>Tipo de mascota</h6>
-                    <div class="form-group d-flex bg-white justify-content-between">
-                        <label class="text-black" for="opcion1">Perro</label>
-                        <input type="checkbox" id="opcion1" name="opciones" value="opcion1"><br>
-
-                        <label class="text-black" for="opcion2">Gato</label>
-                        <input type="checkbox" id="opcion2" name="opciones" value="opcion2"><br>
-
-                        <label class="text-black" for="opcion3">Otro</label>
-                        <input type="checkbox" id="opcion3" name="opciones" value="opcion3"><br>
-                    </div>
-                    <div class="form-group">
-                         <label class="text-black" for="mensaje">Describa su mascota:</label>
-                        <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea></div>
-
-                    <div class="d-flex justify-content-center">
-                        <button id="boton" type="submit" class="btn"><img class="boton-stile" src="../images/boton.png"
-                                alt=""></button>
-                    </div>
-                    <div class="d-flex justify-content-center" id="mensajealert">
-                    </div>
-                </div>
-                <div class="column">
-                </form>
-                <div class="d-flex align-content-center col-4 w-50 flex-column">
-                    <h3>Ubicación</h3>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.066850016401!2d-58.3815704!3d-34.6037389!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1sen!2sar!4v1695337717578!5m2!1sen!2sar"
-                        width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-            </div>
-        </div>
-        </main> -->
+        
         <footer class="d-flex flex-column  flex-lg-row justify-content-center align-items-center ">
             <div class="d-flex flex-column align-items-center m-5 w-25">
                 <p class="fst-italic fs-5 badge ">Pet Paradise Shop</p>
